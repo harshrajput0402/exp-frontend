@@ -6,7 +6,8 @@ import { useNavigate ,Link} from 'react-router-dom';
 import { ArrowLeft, User, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 //  vdo at 2 : 46 
-function Signup({ onSignup, API_URL = "http://localhost:3000" }) {
+const API_URL = import.meta.env.VITE_API_URL ;
+function Signup({ onSignup, API_URL }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
